@@ -1,0 +1,173 @@
+{
+	"info": {
+		"name": "Laravel Room CRUD",
+		"description": "# Laravel Room REST API\n\nКолекція запитів для тестування CRUD операцій над об'єктом **Room** (Кімната) в Laravel.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Rooms",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/api/rooms",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8001",
+					"path": ["api", "rooms"]
+				},
+				"description": "Отримує список усіх кімнат."
+			},
+			"response": [
+				{
+					"name": "Success Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/rooms",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8001",
+							"path": ["api", "rooms"]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [{"key": "Content-Type", "value": "application/json"}],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Conference Room A\",\n        \"description\": \"Main meeting room\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Create Room",
+			"request": {
+				"method": "POST",
+				"header": [{"key": "Content-Type", "value": "application/json"}],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Conference Room A\",\n    \"description\": \"Main meeting room with projector\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/rooms",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8001",
+					"path": ["api", "rooms"]
+				},
+				"description": "Створює нову кімнату."
+			},
+			"response": [
+				{
+					"name": "Success Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [{"key": "Content-Type", "value": "application/json"}],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Conference Room A\",\n    \"description\": \"Main meeting room with projector\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/rooms",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8001",
+							"path": ["api", "rooms"]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [{"key": "Content-Type", "value": "application/json"}],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"title\": \"Conference Room A\",\n    \"description\": \"Main meeting room with projector\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Room (Patch)",
+			"request": {
+				"method": "PATCH",
+				"header": [{"key": "Content-Type", "value": "application/json"}],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Updated Room Name\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/rooms/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8001",
+					"path": ["api", "rooms", "1"]
+				},
+				"description": "Оновлює дані кімнати."
+			},
+			"response": [
+				{
+					"name": "Success Response",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [{"key": "Content-Type", "value": "application/json"}],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Updated Room Name\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/rooms/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8001",
+							"path": ["api", "rooms", "1"]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [{"key": "Content-Type", "value": "application/json"}],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"title\": \"Updated Room Name\",\n    \"description\": \"Main meeting room with projector\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Room",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/api/rooms/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8001",
+					"path": ["api", "rooms", "1"]
+				},
+				"description": "Видаляє кімнату за її ID."
+			},
+			"response": [
+				{
+					"name": "Success Response",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/rooms/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8001",
+							"path": ["api", "rooms", "1"]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [{"key": "Content-Type", "value": "application/json"}],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Room deleted successfully\"\n}"
+				}
+			]
+		}
+	]
+}
