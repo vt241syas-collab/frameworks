@@ -1,0 +1,6 @@
+$kind: http-request
+description: Видаляє кімнату за її ID.
+url: http://localhost:8001/api/rooms/1
+method: DELETE
+examples: ./.resources/Delete Room.resources/examples
+order: 4000

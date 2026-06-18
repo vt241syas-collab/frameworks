@@ -1,0 +1,26 @@
+$kind: http-example
+request:
+  url: http://localhost:8001/api/rooms/1
+  method: PATCH
+  headers:
+    Content-Type: application/json
+  body:
+    type: text
+    content: |-
+      {
+          "title": "Updated Room Name"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+          "id": 1,
+          "title": "Updated Room Name",
+          "description": "Main meeting room with projector"
+      }
+order: 1000

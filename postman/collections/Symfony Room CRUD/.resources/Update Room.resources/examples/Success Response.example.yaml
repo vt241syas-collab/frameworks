@@ -1,0 +1,26 @@
+$kind: http-example
+request:
+  url: http://localhost:8000/api/rooms/1
+  method: PATCH
+  headers:
+    Content-Type: application/json
+  body:
+    type: text
+    content: |-
+      {
+          "description": "New updated description for Symfony"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+          "id": 1,
+          "title": "Symfony Class Room",
+          "description": "New updated description for Symfony"
+      }
+order: 1000

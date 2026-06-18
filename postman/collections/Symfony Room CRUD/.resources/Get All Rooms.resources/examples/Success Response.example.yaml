@@ -1,0 +1,20 @@
+$kind: http-example
+request:
+  url: http://localhost:8000/api/rooms
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      [
+          {
+              "id": 1,
+              "title": "Symfony Class Room",
+              "description": "Room for backend lectures"
+          }
+      ]
+order: 1000

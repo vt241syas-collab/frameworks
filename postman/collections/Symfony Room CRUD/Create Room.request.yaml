@@ -1,0 +1,15 @@
+$kind: http-request
+description: Створює нову кімнату.
+url: http://localhost:8000/api/rooms
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+        "title": "Symfony Class Room",
+        "description": "Room for backend lectures"
+    }
+examples: ./.resources/Create Room.resources/examples
+order: 2000

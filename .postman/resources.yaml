@@ -1,0 +1,9 @@
+workspace:
+  id: 6814af88-418c-4cf3-8f76-90abac0c5c2e
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
+cloudResources:
+  collections:
+    ..\postman\collections\Symfony Room CRUD: 574be8f4-3458-4709-96d0-ebcc18474983
+    ..\postman\collections\Laravel Room CRUD: d8d344f7-bbb9-4c0f-ae91-ba1456f03cd3

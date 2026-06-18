@@ -1,0 +1,6 @@
+$kind: http-request
+description: Отримує список усіх кімнат.
+url: http://localhost:8001/api/rooms
+method: GET
+examples: ./.resources/Get All Rooms.resources/examples
+order: 1000

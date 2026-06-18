@@ -1,0 +1,14 @@
+$kind: http-request
+description: Оновлює опис кімнати.
+url: http://localhost:8000/api/rooms/1
+method: PATCH
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+        "description": "New updated description for Symfony"
+    }
+examples: ./.resources/Update Room.resources/examples
+order: 3000

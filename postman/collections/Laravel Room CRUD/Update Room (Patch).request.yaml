@@ -1,0 +1,14 @@
+$kind: http-request
+description: Оновлює дані кімнати.
+url: http://localhost:8001/api/rooms/1
+method: PATCH
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+        "title": "Updated Room Name"
+    }
+examples: ./.resources/Update Room (Patch).resources/examples
+order: 3000

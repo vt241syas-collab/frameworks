@@ -1,0 +1,27 @@
+$kind: http-example
+request:
+  url: http://localhost:8001/api/rooms
+  method: POST
+  headers:
+    Content-Type: application/json
+  body:
+    type: text
+    content: |-
+      {
+          "title": "Conference Room A",
+          "description": "Main meeting room with projector"
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+          "id": 1,
+          "title": "Conference Room A",
+          "description": "Main meeting room with projector"
+      }
+order: 1000

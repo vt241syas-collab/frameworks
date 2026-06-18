@@ -1,0 +1,5 @@
+$kind: collection
+description: |-
+  # Laravel Room REST API
+
+  Колекція запитів для тестування CRUD операцій над об'єктом **Room** (Кімната) в Laravel.
